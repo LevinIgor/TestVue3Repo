@@ -3,13 +3,13 @@ import { createStore } from 'vuex'
 const store = createStore({
   state () {
     return {
-      count: 0
+      colorTheme: 'light',
     }
   },
   mutations: {
-    increment (state) {
-      state.count++
-    }
+   switchTheme(state){
+      state.colorTheme = state.colorTheme === 'light' ? 'night' : 'light'
+   }
   }
 })
 
