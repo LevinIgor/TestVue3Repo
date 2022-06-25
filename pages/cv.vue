@@ -15,7 +15,6 @@
 .container {  
   margin: 0 auto;
   width: 1500px;
-  height: 9000px;
   background-color: #1a1a1a;;
   backdrop-filter: blur(5px);
 }

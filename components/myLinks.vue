@@ -6,8 +6,8 @@
     >
 
     <div class="link">
-      <img src="../public/icons/telegram.svg" alt="" />
-      <span class="name">LinkedLn</span>
+      <img src="../public/icons/linkedin.svg" alt="" />
+      <span class="name">Linkedin</span>
     </div>
     <div class="link">
       <img src="../public/icons/telegram.svg" alt="" />
@@ -50,6 +50,8 @@ export default {
 .link img {
   width: 35px;
   height: 35px;
+  filter: invert(90%);
+  margin-right:10px;
 }
 .link {
   display: flex;
