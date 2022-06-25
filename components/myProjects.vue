@@ -132,7 +132,7 @@ export default {
 </script>
 <style scoped>
 .header{
-  margin-left: 20px;
+  padding: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, .87);
   font-size: 44px;
   color: rgba(255, 255, 255, .87);;
@@ -141,6 +141,7 @@ export default {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 .project {
   display: flex;
