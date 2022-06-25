@@ -8,14 +8,13 @@
   </div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style scoped>
-.container {  
+.container {
   margin: 0 auto;
   width: 1500px;
-  background-color: #1a1a1a;;
+  background-color: #1a1a1a;
   backdrop-filter: blur(5px);
 }
 </style>
