@@ -1,30 +1,42 @@
 <template>
-  <div class="header">My links</div>
+  <div class="header">Contacts</div>
+  <div class="contacts">
+    <div class="contact">
+      <img src="../public/icons/phone.png" alt="">
+      <span class="value">+380958318689</span>
+    </div>
+    <div class="contact">
+      <img src="../public/icons/mail.svg" alt="">
+      <span class="value">lytghzys@gmail.com</span>
+    </div>
+  </div>
   <div class="links">
-    <a class="link" href="https://t.me/Levin_Ihor">
+    <a class="link" target="_blank" href="https://github.com/LevinIgor">
+      <img src="../public/icons/github.svg" alt="" />GitHub</a
+    >
+    <a class="link" target="_blank" href="https://t.me/Levin_Ihor">
       <img src="../public/icons/telegram.svg" alt="" />Telegram</a
     >
-
-    <div class="link">
-      <img src="../public/icons/linkedin.svg" alt="" />
-      <span class="name">Linkedin</span>
-    </div>
-    <div class="link">
-      <img src="../public/icons/telegram.svg" alt="" />
-      <span class="name">Viber</span>
-    </div>
-    <div class="link">
-      <img src="../public/icons/telegram.svg" alt="" />
-      <span class="name">Instagram</span>
-    </div>
-    <div class="link">
-      <img src="../public/icons/telegram.svg" alt="" />
-      <span class="name">Gmail</span>
-    </div>
-    <div class="link">
-      <img src="../public/icons/telegram.svg" alt="" />
-      <span class="name">Telegram</span>
-    </div>
+    <a
+      class="link"
+      target="_blank"
+      href="https://www.linkedin.com/in/levin-igor/"
+    >
+      <img src="../public/icons/linkedin.svg" alt="" />Linkedin</a
+    >
+    <a class="link" target="_blank" href="viber://chat?number=+380958318689">
+      <img src="../public/icons/viber.svg" alt="" />Viber</a
+    >
+    <a
+      class="link"
+      target="_blank"
+      href="https://www.instagram.com/levin_ihor/"
+    >
+      <img src="../public/icons/instagram.svg" alt="" />Instagram</a
+    >
+    <a class="link" target="_blank" href="mailto:lytghzys@gmail.com">
+      <img src="../public/icons/mail.svg" alt="" />Email</a
+    >
   </div>
 </template>
 <script>
@@ -33,11 +45,24 @@ export default {
 };
 </script>
 <style scoped>
+
 .header {
+  margin-top: 40px;
   padding: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.87);
+  border-bottom: 1px solid rgba(84, 84, 84, .48);;
   font-size: 44px;
   color: rgba(255, 255, 255, 0.87);
+}
+.contacts {
+ display: flex;
+ justify-content: space-around;
+ margin-top: 40px;
+ color: rgba(255, 255, 255, 0.87);
+ font-size: large;
+}
+.contact{
+  display: flex;
+  align-items: center;
 }
 .links {
   display: flex;
@@ -47,11 +72,11 @@ export default {
   width: 100%;
 }
 
-.link img {
+img {
   width: 35px;
   height: 35px;
   filter: invert(90%);
-  margin-right:10px;
+  margin-right: 10px;
 }
 .link {
   display: flex;

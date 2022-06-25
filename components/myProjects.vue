@@ -133,7 +133,8 @@ export default {
 <style scoped>
 .header{
   padding: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, .87);
+  margin-top: 40px;
+  border-bottom: 1px solid rgba(84, 84, 84, .48);
   font-size: 44px;
   color: rgba(255, 255, 255, .87);;
 }

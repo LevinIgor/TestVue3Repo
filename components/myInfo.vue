@@ -70,8 +70,8 @@ export default {
 .header{
   font-size: 40px;
   color: white;
-  margin: 20px;
-  border-bottom: 1px solid white;
+  padding: 20px;
+  border-bottom: 1px solid rgba(84, 84, 84, .48);;
 }
 .blocks {
   display: flex;
