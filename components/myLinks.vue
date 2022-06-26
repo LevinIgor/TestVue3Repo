@@ -1,42 +1,44 @@
 <template>
-  <div class="header">Contacts</div>
-  <div class="contacts">
-    <div class="contact" @click="copy('+380958318689')">
-      <img src="../public/icons/phone.png" alt="" />
-      <span class="value">+380958318689</span>
+  <div class="my-contact">
+    <div class="header">Contacts</div>
+    <div class="contacts">
+      <div class="contact" @click="copy('+380958318689')">
+        <img src="../public/icons/phone.png" alt="" />
+        <span class="value">+380958318689</span>
+      </div>
+      <div class="contact" @click="copy('lytghzys@gmail.com')">
+        <img src="../public/icons/mail.svg" alt="" />
+        <span class="value">lytghzys@gmail.com</span>
+      </div>
     </div>
-    <div class="contact" @click="copy('lytghzys@gmail.com')">
-      <img src="../public/icons/mail.svg" alt="" />
-      <span class="value">lytghzys@gmail.com</span>
+    <div class="links">
+      <a class="link" target="_blank" href="https://github.com/LevinIgor">
+        <img src="../public/icons/github.svg" alt="" />GitHub</a
+      >
+      <a class="link" target="_blank" href="https://t.me/Levin_Ihor">
+        <img src="../public/icons/telegram.svg" alt="" />Telegram</a
+      >
+      <a
+        class="link"
+        target="_blank"
+        href="https://www.linkedin.com/in/levin-igor/"
+      >
+        <img src="../public/icons/linkedin.svg" alt="" />Linkedin</a
+      >
+      <a class="link" target="_blank" href="viber://chat?number=+380958318689">
+        <img src="../public/icons/viber.svg" alt="" />Viber</a
+      >
+      <a
+        class="link"
+        target="_blank"
+        href="https://www.instagram.com/levin_ihor/"
+      >
+        <img src="../public/icons/instagram.svg" alt="" />Instagram</a
+      >
+      <a class="link" target="_blank" href="mailto:lytghzys@gmail.com">
+        <img src="../public/icons/mail.svg" alt="" />Email</a
+      >
     </div>
-  </div>
-  <div class="links">
-    <a class="link" target="_blank" href="https://github.com/LevinIgor">
-      <img src="../public/icons/github.svg" alt="" />GitHub</a
-    >
-    <a class="link" target="_blank" href="https://t.me/Levin_Ihor">
-      <img src="../public/icons/telegram.svg" alt="" />Telegram</a
-    >
-    <a
-      class="link"
-      target="_blank"
-      href="https://www.linkedin.com/in/levin-igor/"
-    >
-      <img src="../public/icons/linkedin.svg" alt="" />Linkedin</a
-    >
-    <a class="link" target="_blank" href="viber://chat?number=+380958318689">
-      <img src="../public/icons/viber.svg" alt="" />Viber</a
-    >
-    <a
-      class="link"
-      target="_blank"
-      href="https://www.instagram.com/levin_ihor/"
-    >
-      <img src="../public/icons/instagram.svg" alt="" />Instagram</a
-    >
-    <a class="link" target="_blank" href="mailto:lytghzys@gmail.com">
-      <img src="../public/icons/mail.svg" alt="" />Email</a
-    >
   </div>
 </template>
 <script setup>
@@ -54,7 +56,7 @@ const { copy } = useClipboard();
 .contacts {
   display: flex;
   justify-content: space-around;
-  margin-top: 40px;
+  margin-top: 80px;
   color: rgba(255, 255, 255, 0.87);
   font-size: large;
 }
@@ -67,7 +69,8 @@ const { copy } = useClipboard();
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 40px;
+
+  margin-top: 80px;
   width: 100%;
 }
 
