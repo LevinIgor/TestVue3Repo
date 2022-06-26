@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-  
     <my-header />
     <my-info />
     <my-projects />
