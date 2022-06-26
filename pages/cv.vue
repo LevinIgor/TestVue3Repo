@@ -9,7 +9,9 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import MyLinks from '@/components/myLinks.vue'
+</script>
 
 <style scoped>
 .container {

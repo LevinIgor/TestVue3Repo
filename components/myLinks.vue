@@ -1,12 +1,12 @@
 <template>
   <div class="header">Contacts</div>
   <div class="contacts">
-    <div class="contact">
-      <img src="../public/icons/phone.png" alt="">
+    <div class="contact" @click="copy('+380958318689')">
+      <img src="../public/icons/phone.png" alt="" />
       <span class="value">+380958318689</span>
     </div>
-    <div class="contact">
-      <img src="../public/icons/mail.svg" alt="">
+    <div class="contact" @click="copy('lytghzys@gmail.com')">
+      <img src="../public/icons/mail.svg" alt="" />
       <span class="value">lytghzys@gmail.com</span>
     </div>
   </div>
@@ -39,28 +39,27 @@
     >
   </div>
 </template>
-<script>
-export default {
-  name: "MyLinks",
-};
+<script setup>
+import { useClipboard } from "@vueuse/core";
+const { copy } = useClipboard();
 </script>
 <style scoped>
-
 .header {
   margin-top: 40px;
   padding: 20px;
-  border-bottom: 1px solid rgba(84, 84, 84, .48);;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.48);
   font-size: 44px;
   color: rgba(255, 255, 255, 0.87);
 }
 .contacts {
- display: flex;
- justify-content: space-around;
- margin-top: 40px;
- color: rgba(255, 255, 255, 0.87);
- font-size: large;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: large;
 }
-.contact{
+.contact {
+  cursor: pointer;
   display: flex;
   align-items: center;
 }
