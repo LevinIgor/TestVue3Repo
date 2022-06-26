@@ -71,7 +71,10 @@ export default {
   font-size: 40px;
   color: white;
   padding: 20px;
-  border-bottom: 1px solid rgba(84, 84, 84, .48);;
+  border-bottom: 1px solid rgba(84, 84, 84, .48);
+  margin-top: 100px;
+  padding-bottom: 40px;
+  font-family:  'Inter', sans-serif;
 }
 .blocks {
   display: flex;

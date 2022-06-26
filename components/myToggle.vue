@@ -66,7 +66,7 @@ export default {
 </script>
 
 <style scoped>
-svg {
+.btn svg {
   box-sizing: content-box;
   width: 20px;
   height: 20px;
