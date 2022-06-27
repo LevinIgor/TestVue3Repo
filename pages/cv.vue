@@ -10,6 +10,7 @@
 
 <script setup>
 import MyLinks from '@/components/myLinks.vue'
+import MyInfo from '@/components/myInfo.vue'
 </script>
 
 <style scoped>

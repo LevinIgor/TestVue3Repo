@@ -3,6 +3,7 @@ import cv from '@/pages/cv.vue'
 import paralax from '@/pages/paralax.vue'
 import parallax3 from '@/pages/parallax3.vue'
 import parallax4 from '@/pages/parallax4.vue'
+import borderTest from '@/pages/borderTest.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -25,6 +26,11 @@ const router = createRouter({
       path: '/parallax4',
       name: 'paralax4',
       component: parallax4
+    },
+    {
+      path: '/border',
+      name: 'border',
+      component: borderTest
     }
   ]
 })
