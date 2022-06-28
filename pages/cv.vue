@@ -11,6 +11,7 @@
 <script setup>
 import MyLinks from '@/components/myLinks.vue'
 import MyInfo from '@/components/myInfo.vue'
+import MyProjects from '@/components/myProjects.vue'
 </script>
 
 <style scoped>
