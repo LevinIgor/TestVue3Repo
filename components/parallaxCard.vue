@@ -1,7 +1,7 @@
 <template>
   <div
     class="parallaxCard"
-     ref="target"
+    ref="target"
     :style="[
       hover ? cardStyle : '',
       { 'background-image': `url(${props.card.backgroundUrl})` },
@@ -19,7 +19,7 @@
   </div>
 </template>
 <script setup>
-import { ref, computed, reactive, watch } from "vue";
+import { ref, computed, reactive } from "vue";
 import { useParallax } from "@vueuse/core";
 
 const props = defineProps(["card"]);
@@ -31,7 +31,6 @@ const cardStyle = computed(() => ({
     parallax.tilt * 40
   }deg) scale(1.03)`,
   zIndex: "10",
-  border:'1px solid #223311',
 }));
 </script>
 <style scoped>
@@ -57,19 +56,19 @@ const cardStyle = computed(() => ({
   padding: 20px;
   display: flex;
 }
-.title{
+.title {
   color: #a4ced5;
   font-size: 44px;
   margin: 0 auto;
-  
-  transform:perspective(2000px) translateY(200px) translateZ(500px);
+
+  transform: perspective(2000px) translateY(200px) translateZ(500px);
   transition: transform 1s;
 }
 .parallaxCard:hover .title {
   transform: translateY(100px);
 }
 
-.text{
+.text {
   box-sizing: border-box;
   position: absolute;
   transition: all 1s ease-in-out;
@@ -78,10 +77,10 @@ const cardStyle = computed(() => ({
   height: 300px;
   padding: 20px;
   font-size: large;
-  color: #aac8e4;;
+  color: #aac8e4;
   background-color: #24242485;
 }
-.parallaxCard:hover .text{
+.parallaxCard:hover .text {
   bottom: -100px;
 }
 </style>
