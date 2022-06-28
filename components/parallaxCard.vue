@@ -1,21 +1,21 @@
 <template>
   <div
     class="parallaxCard"
+     ref="target"
     :style="[
       hover ? cardStyle : '',
       { 'background-image': `url(${props.card.backgroundUrl})` },
     ]"
     @mouseenter="hover = true"
     @mouseleave="hover = false"
-    ref="target"
   >
-    <img class="background" alt="" />
-    <div class="title">
-      <h1>
+    <div class="content-card">
+      <h1 class="title">
         {{ props.card.title }}
       </h1>
+
+      <div class="text">{{ props.card.text }}</div>
     </div>
-    <div class="text">{{ props.card.text }}</div>
   </div>
 </template>
 <script setup>
@@ -27,38 +27,61 @@ const hover = ref(false);
 const target = ref(null);
 const parallax = reactive(useParallax(target));
 const cardStyle = computed(() => ({
-  transform: `rotateX(${parallax.roll * 30}deg) rotateY(${
-    parallax.tilt * 30
-  }deg) scale(1.02) `,
+  transform: `rotateX(${parallax.roll * 40}deg) rotateY(${
+    parallax.tilt * 40
+  }deg) scale(1.03)`,
   zIndex: "10",
+  border:'1px solid #223311',
 }));
 </script>
 <style scoped>
 .parallaxCard {
   box-sizing: border-box;
+  overflow: hidden;
   display: flex;
   position: relative;
   cursor: pointer;
   background-size: cover;
   background-position: center;
-  transform-style: preserve-3d;
-  /* filter: blur(10px); */
   height: 100%;
   width: 100%;
   transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
 }
-.parallaxCard:hover .title {
-  transform: translateY(-100px);
-}
-.title {
-  align-self: center;
+.content-card {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
   padding: 20px;
-  color: #42b883;
-  transform-style: preserve-3d;
-  transform: translateZ(100px);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
+}
+.title{
+  color: #a4ced5;
+  font-size: 44px;
+  margin: 0 auto;
+  
+  transform:perspective(2000px) translateY(200px) translateZ(500px);
+  transition: transform 1s;
+}
+.parallaxCard:hover .title {
+  transform: translateY(100px);
+}
+
+.text{
+  box-sizing: border-box;
+  position: absolute;
+  transition: all 1s ease-in-out;
+  left: 0;
+  bottom: -300px;
+  height: 300px;
+  padding: 20px;
+  font-size: large;
+  color: #aac8e4;;
+  background-color: #24242485;
+}
+.parallaxCard:hover .text{
+  bottom: -100px;
 }
 </style>

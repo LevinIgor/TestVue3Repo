@@ -1,38 +1,45 @@
 <template>
   <div class="info">
-    <div class="header">Information</div>
+    <div class="header">Technology stack</div>
     <div class="blocks">
       <parallax-card v-for="block in blocks" :card="block" class="block" />|
+    </div>
+    <div class="text">
+      <h1 class="title">Other...</h1>
+      <div class="text-blocks">
+        <div class="text-block">
+          
+        </div>
+      </div>
     </div>
   </div>
 </template>
 <script setup>
-import { ref } from "vue";
 import parallaxCard from "./parallaxCard.vue";
 
 const blocks = [
   {
-    title: "JavaScript / TypeScript",
+    title: "JavaScript",
     backgroundUrl:
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAhFBMVEUAAAD///+qqqr7+/vQ0NDLy8teXl5oaGjW1tbu7u5kZGTZ2dnx8fHT09PIyMi3t7ePj48gICAODg5ubm53d3c1NTXi4uJNTU2hoaG9vb2ysrLm5uZbW1vAwMBzc3OWlpaGhoZGRkYtLS2BgYE/Pz8cHBweHh4oKChLS0sVFRVBQUGcnJxj+1INAAAGIklEQVR4nO2ca3uqOhBGQaq7tlTwgncram3r9v//v6P2CswkE5Qk+zzv+lqlWRJymZkQBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAw2G73fYHrlvRCNnwOGuPw0+icXs+2vhnumtVmf8VfHEz/Xb7TXc18kyyRzWzo/3a6JH63ufNnL1YaLiYWoajmPe70M6sNF5EDcPOQuN3pmWp/XrMDROB34nxxpaCBlPDF8kN/GBoz0KFoeGD2O9EatGDx8zw2UQwDNc2TTiMDDtmgmGYWzThMDHMIlPDcGTXhoI0fKA/2zUWDMOlXR0CA0PhNFEk7lsWqiA3NH4IP+jZNirTFhuSC20BuV2hCmLDUU3BMHyzLlVAbFj3Fp6W4dalCkgNJ/UF/5F7OGMNxq30eZgfe/SOqvvHvlMRqSE32c9/thDPxK7Yg02U0HBJ+8WTwqd2pd9hPKlcyD5CwzUtWA7JvBXGIz/2FncyQ3JhQC3JfnrqoyeRDNKwOjqQS9IVcb3B5yejvPGmC5EZDsiBktzEby5/unO+HP1GZkjum+IDecXj6QZ6sGn6RmZIzvdd5pLxyp8bGEgNycliwVzSkxHmiysMuXvoGVf00sirzsjyJDJ8IRdtTLDDM2SGr+RscXTRYGNkhvSMX1m0eYnQ8J76WDhz0GBjhIZT0jCcOmixKeTNqRpyUZq5gyYbIjQMGMNw4cMWUInUkM9qJ1v7rTZBapiyhmE0f7XfbjmkITGVD3jDEzNJ9YYjpIbBSqkY3juPqXGQzxdlqA2YLlI/FwBiQzpmVSBqOQ7+ksgN/2oNT9y5zxeWkRsGLYli+OhTBOOMgaE0B9zd2VXQYGK4kRmeHH26jyaGBjnEhT/Po5EhE9wnWfmymDMzNFH0JeptaBjs5IrhkxehKlPDYGJQVRP5ULxHpufV9aUmdTUeVLbVMAyGBtVfiR0NBXUMpcubC84rhuoZBu/6dbgvijUNg2CpqNYv4jhaRbZTYmjg6Daff4Xhaeag0/sVnMbjrjIMgqylO3pxhss0WoGM08gNg+CQCqr3XfZTcSRKwVLbWSOHIRxh3kKDtrM6THDcxvDcWZXrVYcZcTLLXW/BvFPdR3fhVNLwuebFUn7B6m5lc1PD4JUtQ3XXTUnDKwJJ7A7Z2alL0vCacOCE6anOQow3N+QSHM5WbrfupQEXrXIWQm3AkK4JdzbnkyvvKw3JCICzXSK5A1bMFv1cf03yHKazgA251uIXIHkkuMHkWEOVTFuBfGa4pMPyslHS7hNe7BseEvbsEdUYZmTPPqNPY92/e6eu2WiF2HlJzGz5+qQhdZT+8DN+6AYNMkXV4HOYXSYEJpBAH5sk6pgLGwfNlp0Mijd3Puir5o6ej8hCoO6+/LFlachVL3rIXy2/hQzBw89YST5cZBCj/KBl1SiFSpGuY2xm1fb2u8yH2r/QB7aeBC3mlyjMeeFGClFKG9Kn6ifomG7hkeF27veVrvwBs7doIqA4qUT57sszGZMn+z2nKzKiR2pi5JLEtx9KD3Pi33QLD8OAK1UrbFYVwZd4WirY6+/Y2OnN4zTcW4CS79Yf1lzbiw+sOq39ePxa/7x20jb/a9y86F2Rpo17rel0OlcczS7NXNr8SxTFcaRJmt68kw51rVJRGtfp0ySG3L7+lD49IKIy6pmUXzA0cCR/U781eeVizFEEA5o4zkYNpSJi4mLCNCFLM2vSOi+TOZNTF7ui04eNpQ9rvuaBbs1B/oYvgvdmDFXnBxQwM/P2igG1ucKoOu8EYje3/bq9vtFgt/kAoQhQ7MlMo568QUFJeX2RrnKLY1AI9UPTeUP+nSsUsabotSOpuyiwaP5ct0HFazim3yDwG8O538q7Wx7EI4Qo3JcZ9Io7S4ehBrLVjfhFD5nwcby3WMuekfmlIkZ5k51+Q2X7RbuTmXLCjhLTAWGbPvGjTrfnIle4zdnpbLyuFQbbL9ft6jZ63E6Xzuqf9sOk0rvi3vGq8XyfdfLpPJmtZsm8lf55YeJvNtkO02krSWZJ67h+9uql1AAAAAAAAAAAwP+W/wA5rEutfvF8eAAAAABJRU5ErkJggg==",
+      "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/JS.jpg?alt=media&token=1ec07b5a-bd84-4526-bfd9-25acd3c4aedc",
+    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia saepe maxime beatae sunt ut impedit ullam eum odit excepturi voluptas.",
+  },
+  {
+    title: "VueJs",
+    backgroundUrl:
+      "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/VUE.jpg?alt=media&token=d7919401-2de6-4e07-8a5e-3e6c3421de9b",
+    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia saepe maxime beatae sunt ut impedit ullam eum odit excepturi voluptas.",
+  },
+  {
+    title: "Firebase",
+    backgroundUrl:
+      "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/FIREBASE.jpg?alt=media&token=d09aa969-80cc-402d-b7d9-1e7058dff99c",
     text: "",
   },
   {
-    title: "Vue 2/3 - Nuxt, VueX, Vue Router, VueUse",
+    title: "Github",
     backgroundUrl:
-      "data:image/jpeg;base64,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",
-    text: "",
-  },
-  {
-    title: "Firebase - Firestore, Firebase Auth, Firebase Storage",
-    backgroundUrl:
-      "data:image/png;base64,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",
-    text: "",
-  },
-  {
-    title: "Github - Github Pages, Github Actions",
-    backgroundUrl:
-      "data:image/jpeg;base64,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",
+      "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/GITHUB.jpg?alt=media&token=48c0bb09-c68a-4e62-9eaa-55421d795945",
     text: "",
   },
   {
@@ -46,13 +53,11 @@ const blocks = [
     text: "",
   },
 ];
-
 </script>
 <style scoped>
-
 .header {
   font-size: 40px;
-  color: white;
+  color: rgba(255, 255, 255, .87);
   padding: 20px;
   border-bottom: 1px solid rgba(84, 84, 84, 0.48);
   margin-top: 100px;
@@ -63,14 +68,10 @@ const blocks = [
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  perspective: 10000px;
-  
+  perspective: 1000px;
 }
 .block {
   width: 500px;
   height: 500px;
-}
-.block:hover{
-
 }
 </style>
