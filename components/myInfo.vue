@@ -29,37 +29,37 @@ const blocks = [
     title: "JavaScript",
     backgroundUrl:
       "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/JS.jpg?alt=media&token=1ec07b5a-bd84-4526-bfd9-25acd3c4aedc",
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia saepe maxime beatae sunt ut impedit ullam eum odit excepturi voluptas.",
+    text: "JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for web page behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users devices.",
   },
   {
-    title: "VueJs",
+    title: "Vue.js",
     backgroundUrl:
       "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/VUE.jpg?alt=media&token=d7919401-2de6-4e07-8a5e-3e6c3421de9b",
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia saepe maxime beatae sunt ut impedit ullam eum odit excepturi voluptas.",
-  },
-  {
-    title: "Firebase",
-    backgroundUrl:
-      "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/FIREBASE.jpg?alt=media&token=d09aa969-80cc-402d-b7d9-1e7058dff99c",
-    text: "",
-  },
-  {
-    title: "Github",
-    backgroundUrl:
-      "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/GITHUB.jpg?alt=media&token=48c0bb09-c68a-4e62-9eaa-55421d795945",
-    text: "",
+    text: "Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications. It was created by Evan You, and is maintained by him and the rest of the active core team members",
   },
   {
     title: "Vitest",
     backgroundUrl:
       "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/VITEST.jpg?alt=media&token=fb555bda-5cdc-4d83-8e82-6505048e78fd",
-    text: "",
+    text: "Vitest is a blazing fast unit test framework powered by Vite.",
   },
   {
     title: "Axios",
     backgroundUrl:
       "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/axios.jpg?alt=media&token=fa2c66e4-9230-4c03-835e-c5bac33524eb",
-    text: "",
+    text: "Axios is a simple promise based HTTP client for the browser and node.js. Axios provides a simple to use library in a small package with a very extensible interface.",
+  },
+  {
+    title: "Github",
+    backgroundUrl:
+      "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/GITHUB.jpg?alt=media&token=48c0bb09-c68a-4e62-9eaa-55421d795945",
+    text: "GitHub, Inc. is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management (SCM) functionality of Git, plus its own features. It provides access control and several collaboration features such as bug tracking, feature requests, task management, continuous integration, and wikis for every project.",
+  },
+  {
+    title: "Firebase",
+    backgroundUrl:
+      "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/FIREBASE.jpg?alt=media&token=d09aa969-80cc-402d-b7d9-1e7058dff99c",
+    text: "Firebase is a platform developed by Google for creating mobile and web applications. It was originally an independent company founded in 2011. In 2014, Google acquired the platform[1] and it is now their flagship offering for app development.",
   },
 ];
 const textBlocks = [
@@ -118,7 +118,7 @@ const textBlocks = [
     color: "",
     iconUrl:
       "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/sass.png?alt=media&token=4e765a2b-6a3f-493f-b0b6-c7bb60833284",
-      color: "#590d22",
+    color: "#590d22",
   },
   {
     title: "ESLint",
@@ -126,7 +126,7 @@ const textBlocks = [
     color: "",
     iconUrl:
       "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/javascript.png?alt=media&token=12ca187c-ea5b-4e97-a816-bf223a3edc23",
-      color:'#604c06'
+    color: "#604c06",
   },
   {
     title: "Prettier ",
@@ -134,7 +134,7 @@ const textBlocks = [
     color: "",
     iconUrl:
       "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/javascript.png?alt=media&token=12ca187c-ea5b-4e97-a816-bf223a3edc23",
-      color:'#604c06'
+    color: "#604c06",
   },
   {
     title: "Babel ",
@@ -142,7 +142,7 @@ const textBlocks = [
     color: "",
     iconUrl:
       "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/javascript.png?alt=media&token=12ca187c-ea5b-4e97-a816-bf223a3edc23",
-      color:'#604c06'
+    color: "#604c06",
   },
   {
     title: "Bootstrap",
@@ -156,55 +156,30 @@ const textBlocks = [
     url: "https://pages.github.com/",
     iconUrl:
       "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/github.png?alt=media&token=b2a5dfb3-dd77-4733-bbcf-9bb5bfd03c5a",
-      color:'#390099'
+    color: "#390099",
   },
   {
     title: "Firebase Auth",
     url: "https://firebase.google.com/docs/auth",
     iconUrl:
       "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/firebase.png?alt=media&token=23c061e4-5553-4f6f-ad0a-5d816f28df12",
-      color:'#604c06'
+    color: "#604c06",
   },
   {
     title: "Firebase Cloud Firestore",
     url: "https://firebase.google.com/docs/firestore",
     iconUrl:
       "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/firebase.png?alt=media&token=23c061e4-5553-4f6f-ad0a-5d816f28df12",
-      color:'#604c06'
+    color: "#604c06",
   },
   {
     title: "Firebase Storage",
     url: "https://firebase.google.com/docs/storage",
     iconUrl:
       "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/firebase.png?alt=media&token=23c061e4-5553-4f6f-ad0a-5d816f28df12",
-      color:'#604c06'
+    color: "#604c06",
   },
 ];
-
-const getRandomColor = () => {
-  // const colors = [
-  //   "#f72585",
-  //   "#b5179e",
-  //   "#7209b7",
-  //   "#560bad",
-  //   "#480ca8",
-  //   "#3a0ca3",
-  //   "#3f37c9",
-  //   "#4361ee",
-  //   "#4895ef",
-  //   "#4cc9f0",
-  // ];
-  const colors = [
-    "#0b2c24",
-    "#247a4d",
-    "#0f392b",
-    "#206d46",
-    "#134632",
-    "#1c603f",
-    "#185339",
-  ];
-  return colors[Math.floor(Math.random() * colors.length)];
-};
 </script>
 <style scoped>
 .header {
@@ -227,7 +202,7 @@ const getRandomColor = () => {
   height: 500px;
 }
 
-.text{
+.text {
   margin-top: 40px;
 }
 .text-title {

@@ -34,6 +34,10 @@ const cardStyle = computed(() => ({
 }));
 </script>
 <style scoped>
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
 .parallaxCard {
   box-sizing: border-box;
   overflow: hidden;
