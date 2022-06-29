@@ -5,7 +5,7 @@
       <parallax-card v-for="block in blocks" :card="block" class="block" />|
     </div>
     <div class="text">
-      <span class="text-title">Details</span>
+      <div class="text-title">Details</div>
       <div class="text-blocks">
         <a
           v-for="textBlock in textBlocks"
@@ -85,7 +85,7 @@ const textBlocks = [
     color: "#333d29",
   },
   {
-    title: "Nuxt js",
+    title: "Nuxt.js",
     url: "https://nuxtjs.org/",
     iconUrl:
       "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/vue.png?alt=media&token=f1406576-665c-483b-bae1-eeff08eee918",
@@ -108,6 +108,13 @@ const textBlocks = [
   {
     title: "VueUse",
     url: "https://vueuse.org/",
+    iconUrl:
+      "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/vue.png?alt=media&token=f1406576-665c-483b-bae1-eeff08eee918",
+    color: "#333d29",
+  },
+  {
+    title: "Vue-CLI",
+    url: "https://cli.vuejs.org/",
     iconUrl:
       "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/vue.png?alt=media&token=f1406576-665c-483b-bae1-eeff08eee918",
     color: "#333d29",
@@ -206,6 +213,8 @@ const textBlocks = [
   margin-top: 40px;
 }
 .text-title {
+  box-sizing: border-box;
+  width: 100%;
   padding: 20px;
   margin-top: 40px;
   border-bottom: 1px solid rgba(84, 84, 84, 0.48);
@@ -223,12 +232,13 @@ const textBlocks = [
   display: flex;
   align-items: center;
   cursor: pointer;
+  font-size: medium;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.87);
   border: 1px solid rgba(255, 255, 255, 0.308);
   border-radius: 10px;
-  margin: 10px 20px;
-  padding: 10px 30px;
+  margin: 5px 10px;
+  padding: 5px 15px;
   margin-bottom: 10px;
   transition: all 0.2s ease-in-out;
 }

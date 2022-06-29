@@ -46,12 +46,15 @@ import { useClipboard } from "@vueuse/core";
 const { copy } = useClipboard();
 </script>
 <style scoped>
+.my-contact{
+ margin-top: 140px;
+}
 .header {
-  margin-top: 40px;
   padding: 20px;
   border-bottom: 1px solid rgba(84, 84, 84, 0.48);
   font-size: 44px;
   color: rgba(255, 255, 255, 0.87);
+  font-family: "Inter", sans-serif;
 }
 .contacts {
   display: flex;

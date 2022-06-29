@@ -3,11 +3,16 @@
     <div class="header">Projects</div>
     <div class="blocks">
       <div class="project" v-for="project in projects">
-        <img class="img" :src="project.imgUrl" :alt="project.name" />
+        <a :href="project.projectUrl" target="_blank">
+          <img class="img" :src="project.imgUrl" :alt="project.name" />
+        </a>
         <a :href="project.projectUrl" target="_blank" class="name">{{
           project.name
         }}</a>
         <span class="description">{{ project.description }}</span>
+        <div class="tags">
+          <span class="tag" v-for="tag in project.tags"> {{ tag }} </span>
+        </div>
         <div class="links">
           <a :href="project.githubUrl" target="_blank"
             ><img class="icon" src="../public/icons/github.svg" alt="github"
@@ -22,29 +27,35 @@ const projects = [
   {
     name: "Geopardy",
     description:
-      'The game is designed for several teams (ideally two). The goal is to score as many points as possible by answering questions of different categories (Similar: "Jeopardy", "Millionaire"). The game requires at least two teams and a leader. The team chooses a category question with any desired price, as soon as either team is ready to answer, it can do so, the presenter checks the answers and decides on the correctness of the answer',
+      'The game is designed for several teams (ideally two). The goal is to score as many points as possible by answering questions of different categories (Similar: "Jeopardy", "Millionaire").',
     imgUrl:
       "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/geopardy.png?alt=media&token=96dbc445-fba0-4a9f-906c-4dcbe58e38a7",
     githubUrl: "https://github.com/LevinIgor/geopardy",
     projectUrl: "https://levinigor.github.io/geopardy/",
+    tags: ["Vue", "Firebase", "Vuex", "Nuxt.js", "Transitions"],
   },
   {
-    name: "",
-    description: "",
-    imgUrl: "",
-    githubUrl: "",
-    projectUrl: "",
+    name: "CV in Vue3",
+    description:
+      'This is a CV in Vue3. It is a simple CV with a lot of features. It is a work in progress and is not finished yet.',
+    imgUrl:
+      "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/cv-Vue3.png?alt=media&token=4483a269-ae06-4f38-a0a1-e39b1f9ea654",
+    githubUrl: "https://github.com/LevinIgor/TestVue3Repo",
+    projectUrl: "https://levinigor.github.io/geopardy/",
+    tags: ["Vue 3", "Vuex", "Composition API", "VueUse"],
   },
-  { name: "", description: "", imgUrl: "", githubUrl: "", projectUrl: "" },
 ];
 </script>
 <style scoped>
+.projects {
+  margin-top: 140px;
+}
 .header {
   padding: 20px;
-  margin-top: 40px;
   border-bottom: 1px solid rgba(84, 84, 84, 0.48);
   font-size: 44px;
   color: rgba(255, 255, 255, 0.87);
+  font-family: "Inter", sans-serif;
 }
 .blocks {
   display: flex;
@@ -55,12 +66,14 @@ const projects = [
 .project {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   box-sizing: border-box;
   overflow: hidden;
 
   font-size: 15px;
   border-radius: 10px;
   width: 450px;
+  height: 500px;
   margin: 10px;
   padding: 20px;
   background-color: #242424;
@@ -68,7 +81,7 @@ const projects = [
 }
 .img {
   width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
 }
 .name {
@@ -87,11 +100,19 @@ const projects = [
   font-size: 18px;
   color: #aac8e4;
 }
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.tag {
+  color: rgba(233, 244, 255, 0.852);
+  margin-right: 10px;
+}
 .links {
   display: flex;
   align-items: center;
   justify-content: right;
-  margin-top: 30px;
 }
 .icon {
   cursor: pointer;
