@@ -72,6 +72,7 @@ header {
   font-family: "Inter", sans-serif;
   transition: all 0.2s;
   color: rgba(255, 255, 255, 0.87);
+  user-select: none;
   padding: 5px 20px;
   margin-left: 10px;
   font-size: 14px;

@@ -23,13 +23,14 @@ const test = ref(null);
 const information = ref(null);
 
 const scrollTo = async (element) => {
-  element == "information"
+
+  element == "Information"
     ? information.value.$el.scrollIntoView({ behavior: "smooth" })
     : "";
-  element == "projects"
+  element == "Projects"
     ? projects.value.$el.scrollIntoView({ behavior: "smooth" })
     : "";
-  element == "contacts"
+  element == "Contacts"
     ? contacts.value.$el.scrollIntoView({ behavior: "smooth" })
     : "";
 };
