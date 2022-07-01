@@ -3,6 +3,7 @@
     <my-header @scroll="scrollTo($event)" />
     <my-info ref="information" />
     <my-projects ref="projects" />
+    <my-experience ref="experience" />
     <my-links ref="contacts" />
     <my-footer />
   </div>
@@ -12,6 +13,7 @@
 import MyHeader from "@/components/myHeader.vue";
 import MyInfo from "@/components/myInfo.vue";
 import MyProjects from "@/components/myProjects.vue";
+import myExperience from "@/components/myExperience.vue";
 import MyLinks from "@/components/myLinks.vue";
 import MyFooter from "@/components/myFooter.vue";
 
@@ -21,6 +23,7 @@ const projects = ref(null);
 const contacts = ref(null);
 const test = ref(null);
 const information = ref(null);
+const experience = ref(null);
 
 const scrollTo = async (element) => {
 
@@ -32,6 +35,9 @@ const scrollTo = async (element) => {
     : "";
   element == "Contacts"
     ? contacts.value.$el.scrollIntoView({ behavior: "smooth" })
+    : "";
+  element == "Experience"
+    ? experience.value.$el.scrollIntoView({ behavior: "smooth" })
     : "";
 };
 </script>

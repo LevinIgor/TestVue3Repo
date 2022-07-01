@@ -27,7 +27,7 @@
 import myToggle from "./myToggle.vue";
 
 const emit = defineEmits(["scroll"]);
-const links = ["Information", "Projects", "Contacts"];
+const links = ["Information", "Projects", "Contacts", "Experience"];
 </script>
 
 <style scoped>
