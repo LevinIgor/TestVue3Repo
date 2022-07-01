@@ -4,11 +4,12 @@
       <span> Curriculum vitae CV </span>
     </div>
     <div class="navbar">
-      <div class="link">Information</div>
-      <div class="link">Projects</div>
-      <div class="link">Contacts</div>
+      <div class="link" @click="emit('scroll', link)" v-for="link in links">
+        {{ link }}
+      </div>
+
       <svg
-      class="github-icon"
+        class="github-icon"
         xmlns="http://www.w3.org/2000/svg"
         focusable="false"
         viewBox="0 0 24 24"
@@ -22,37 +23,42 @@
   </header>
 </template>
 
-<script>
-export default {
-  name: "MyHeader",
-};
+<script setup>
+import myToggle from "./myToggle.vue";
+
+const emit = defineEmits(["scroll"]);
+const links = ["Information", "Projects", "Contacts"];
 </script>
 
 <style scoped>
+header {
+  position: sticky;
+  top: 0;
+  width: 1500px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.48);
+  padding: 10px 20px;
+  background-color: #1a1a1a;
+}
 .logo {
   font-family: "Inter", sans-serif;
   font-size: 30px;
   color: #42b883;
 }
 
-.github-icon{
+.github-icon {
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
   filter: invert(50%);
   width: 25px;
   height: 25px;
   margin-left: 50px;
 }
-.github-icon:hover{
+.github-icon:hover {
   filter: invert(100%);
-}
-header {
-  display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-  border-bottom: 1px solid rgba(84, 84, 84, 0.48);
-  width: 100%;
-  padding: 10px 20px;
 }
 .navbar {
   box-sizing: border-box;
@@ -66,7 +72,8 @@ header {
   font-family: "Inter", sans-serif;
   transition: all 0.2s;
   color: rgba(255, 255, 255, 0.87);
-  margin-left: 20px;
+  padding: 5px 20px;
+  margin-left: 10px;
   font-size: 14px;
   font-weight: 500;
 }
