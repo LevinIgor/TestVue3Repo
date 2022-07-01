@@ -48,7 +48,7 @@ const projects = [
 </script>
 <style scoped>
 .projects {
-  margin-top: 140px;
+  padding-top: 100px;
 }
 .header {
   padding: 20px;

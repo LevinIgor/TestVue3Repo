@@ -21,12 +21,10 @@ import { ref } from "vue";
 
 const projects = ref(null);
 const contacts = ref(null);
-const test = ref(null);
 const information = ref(null);
 const experience = ref(null);
 
 const scrollTo = async (element) => {
-
   element == "Information"
     ? information.value.$el.scrollIntoView({ behavior: "smooth" })
     : "";
@@ -47,6 +45,7 @@ const scrollTo = async (element) => {
   top: 0;
   margin: 0 auto;
   box-sizing: content-box;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
   width: 1500px;
   background-color: #1a1a1a;
   border-left: 1px solid rgba(84, 84, 84, 0.48);

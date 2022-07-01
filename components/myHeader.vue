@@ -27,12 +27,12 @@
 import myToggle from "./myToggle.vue";
 
 const emit = defineEmits(["scroll"]);
-const links = ["Information", "Projects", "Contacts", "Experience"];
+const links = ["Information", "Projects","Experience", "Contacts", ];
 </script>
 
 <style scoped>
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 1500px;
   z-index: 10;

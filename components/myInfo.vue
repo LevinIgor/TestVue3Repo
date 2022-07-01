@@ -194,7 +194,7 @@ const textBlocks = [
   color: rgba(255, 255, 255, 0.87);
   padding: 20px;
   border-bottom: 1px solid rgba(84, 84, 84, 0.48);
-  margin-top: 100px;
+  padding-top: 100px;
   padding-bottom: 40px;
   font-family: "Inter", sans-serif;
 }

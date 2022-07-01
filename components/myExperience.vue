@@ -1,5 +1,5 @@
 <template>
-  <div class="myExperience">
+  <div class="my-experience">
     <div class="header">Experience</div>
     <div class="blocks">
       <div class="block" v-for="block in blocks">
@@ -51,6 +51,9 @@ const blocks = [
 ];
 </script>
 <style scoped>
+.my-experience{
+padding-top: 100px;
+}
 .header {
   padding: 20px;
   border-bottom: 1px solid rgba(84, 84, 84, 0.48);
