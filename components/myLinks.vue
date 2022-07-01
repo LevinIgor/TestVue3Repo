@@ -89,9 +89,13 @@ img {
   align-items: center;
   text-decoration: none;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 10px 25px;
   margin: 10px;
   background-color: var(--second-bg-color);
   color: var(--font-color-green);
+  transition: background-color 0.2s ease-in-out;
+}
+.link:hover {
+  background-color: var(--second-bg-color-active);
 }
 </style>

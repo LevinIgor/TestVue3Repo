@@ -59,7 +59,7 @@ const cardStyle = computed(() => ({
   width: 100%;
   height: 100%;
   padding: 20px;
-  color: var(--font-color-blue);
+  color: var(--font-color-green);
 }
 .title {
   font-size: 44px;
@@ -80,6 +80,7 @@ const cardStyle = computed(() => ({
   height: 300px;
   padding: 20px;
   font-size: large;
+  color: var(--font-color-blue);
   background-color: var(--second-bg-color);
 }
 .parallaxCard:hover .text {
