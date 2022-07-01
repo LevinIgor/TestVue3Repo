@@ -49,6 +49,7 @@ const cardStyle = computed(() => ({
   height: 100%;
   width: 100%;
   transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+  filter: grayscale(.9);
 }
 .content-card {
   box-sizing: border-box;
@@ -71,6 +72,9 @@ const cardStyle = computed(() => ({
   transform: translateY(100px);
 }
 
+.parallaxCard:hover{
+  filter: grayscale(0);
+}
 .text {
   box-sizing: border-box;
   position: absolute;
