@@ -191,9 +191,9 @@ const textBlocks = [
 <style scoped>
 .header {
   font-size: 40px;
-  color: rgba(255, 255, 255, 0.87);
+  color: var(--font-color-white);
   padding: 20px;
-  border-bottom: 1px solid rgba(84, 84, 84, 0.48);
+  border-bottom: 1px solid var(--border-color);
   padding-top: 100px;
   padding-bottom: 40px;
   font-family: "Inter", sans-serif;
@@ -217,16 +217,15 @@ const textBlocks = [
   width: 100%;
   padding: 20px;
   margin-top: 40px;
-  border-bottom: 1px solid rgba(84, 84, 84, 0.48);
+  border-bottom: 1px solid var(--border-color);
   font-size: 40px;
-  color: rgba(255, 255, 255, 0.87);
+  color: var(--font-color-white);
 }
 .text-blocks {
   display: flex;
   flex-wrap: wrap;
   margin: 40px 0;
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.87);
 }
 .text-block {
   display: flex;
@@ -234,8 +233,8 @@ const textBlocks = [
   cursor: pointer;
   font-size: medium;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.87);
-  border: 1px solid rgba(255, 255, 255, 0.308);
+  color: var(--font-color-white);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   margin: 5px 10px;
   padding: 5px 15px;
@@ -246,7 +245,6 @@ const textBlocks = [
   margin-right: 10px;
 }
 .text-block:hover {
-  background-color: rgba(26, 255, 1, 0.056) !important;
-  transform: scale(1.01);
+  color:var(--font-color-white-active);
 }
 </style>

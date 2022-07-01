@@ -34,19 +34,19 @@ const links = ["Information", "Projects","Experience", "Contacts", ];
 header {
   position: fixed;
   top: 0;
-  width: 1500px;
+  width: var(--container-width);
   z-index: 10;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  border-bottom: 1px solid rgba(84, 84, 84, 0.48);
+  border-bottom: 1px solid var(--border-color);
   padding: 10px 20px;
-  background-color: #1a1a1a;
+  background-color: var(--main-container-color);
 }
 .logo {
   font-family: "Inter", sans-serif;
   font-size: 30px;
-  color: #42b883;
+  color: var(--font-color-green);
 }
 
 .github-icon {
@@ -71,14 +71,15 @@ header {
   cursor: pointer;
   font-family: "Inter", sans-serif;
   transition: all 0.2s;
-  color: rgba(255, 255, 255, 0.87);
+  color: var(--font-color-white);
   user-select: none;
   padding: 5px 20px;
   margin-left: 10px;
   font-size: 14px;
   font-weight: 500;
+  
 }
 .link:hover {
-  color: #42b883;
+  color: var(--font-color-green);
 }
 </style>

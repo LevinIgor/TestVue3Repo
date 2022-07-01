@@ -14,10 +14,10 @@ footer{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: rgba(255, 255, 255, 0.87);
+  color: var(--font-color-white);
   margin-top: 100px;
   padding: 30px 20px;
-  background-color: #242424;
+  background-color: var(--second-bg-color);
 }
 span{
   margin-left: 30px;

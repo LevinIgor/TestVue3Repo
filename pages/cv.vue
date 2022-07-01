@@ -46,8 +46,8 @@ const scrollTo = async (element) => {
   margin: 0 auto;
   box-sizing: content-box;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
-  width: 1500px;
-  background-color: #1a1a1a;
+  width: var(--container-width);
+  background-color: var(--main-container-color);
   border-left: 1px solid rgba(84, 84, 84, 0.48);
   border-right: 1px solid rgba(84, 84, 84, 0.48);
 }

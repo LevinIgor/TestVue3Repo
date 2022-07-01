@@ -52,19 +52,18 @@ const cardStyle = computed(() => ({
 }
 .content-card {
   box-sizing: border-box;
+  display: flex;
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 100%;
   padding: 20px;
-  display: flex;
+  color: var(--font-color-blue);
 }
 .title {
-  color: #a4ced5;
   font-size: 44px;
   margin: 0 auto;
-
   transform: perspective(2000px) translateY(200px) translateZ(500px);
   transition: transform 1s;
 }
@@ -81,8 +80,7 @@ const cardStyle = computed(() => ({
   height: 300px;
   padding: 20px;
   font-size: large;
-  color: #aac8e4;
-  background-color: #24242485;
+  background-color: var(--second-bg-color);
 }
 .parallaxCard:hover .text {
   bottom: -100px;

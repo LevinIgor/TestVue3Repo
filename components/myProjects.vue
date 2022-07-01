@@ -52,9 +52,9 @@ const projects = [
 }
 .header {
   padding: 20px;
-  border-bottom: 1px solid rgba(84, 84, 84, 0.48);
+  border-bottom: 1px solid var(--border-color);
   font-size: 44px;
-  color: rgba(255, 255, 255, 0.87);
+  color: var(--font-color-white);
   font-family: "Inter", sans-serif;
 }
 .blocks {
@@ -73,11 +73,10 @@ const projects = [
   font-size: 15px;
   border-radius: 10px;
   width: 450px;
-  height: 500px;
+  height: 510px;
   margin: 10px;
   padding: 20px;
-  background-color: #242424;
-  backdrop-filter: blur(5px);
+  background-color: var(--second-bg-color);
 }
 .img {
   width: 100%;
@@ -89,16 +88,16 @@ const projects = [
   text-decoration: none;
   margin-top: 20px;
   font-size: 20px;
-  color: #42b883;
+  color: var(--font-color-green);
   transition: color 0.4s;
 }
 .name:hover {
-  color: #48e19c;
+  color: var(--font-color-green-active);
 }
 .description {
   margin-top: 10px;
   font-size: 18px;
-  color: #aac8e4;
+  color: var(--font-color-blue);
 }
 .tags {
   display: flex;
@@ -106,7 +105,7 @@ const projects = [
   margin-top: 20px;
 }
 .tag {
-  color: rgba(233, 244, 255, 0.852);
+  color: var(--font-color-white);
   margin-right: 10px;
 }
 .links {

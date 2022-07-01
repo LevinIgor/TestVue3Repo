@@ -1,0 +1,27 @@
+:root{
+    --container-width: 1500px;
+    --font-size-small: 0.8rem;
+    --font-size-normal: 0.8rem;
+    --font-size-large: 0.8rem;
+
+
+
+    --main-bg-color: black;
+    --second-bg-color:#242424;
+    --main-container-color:#1a1a1a;
+
+
+
+    --font-color-green: #42b883;
+    --font-color-green-active: #4dd799;
+
+    --font-color-white: rgba(255, 255, 255, 0.87);
+    --font-color-white-active: rgb(255, 255, 255);
+
+    --font-color-blue: #a4ced5;
+    --font-color-blue-active: #b9eaf0;
+
+
+
+    --border-color:rgba(84, 84, 84, 0.48);
+}

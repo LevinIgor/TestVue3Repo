@@ -47,20 +47,20 @@ const { copy } = useClipboard();
 </script>
 <style scoped>
 .my-contact{
- margin-top: 140px;
+ padding-top: 100px;
+ color: var(--font-color-white);
 }
 .header {
   padding: 20px;
-  border-bottom: 1px solid rgba(84, 84, 84, 0.48);
+  border-bottom: 1px solid var(--border-color);
   font-size: 44px;
-  color: rgba(255, 255, 255, 0.87);
+  color: var(--font-color-white);
   font-family: "Inter", sans-serif;
 }
 .contacts {
   display: flex;
   justify-content: space-around;
   margin-top: 80px;
-  color: rgba(255, 255, 255, 0.87);
   font-size: large;
 }
 .contact {
@@ -91,7 +91,7 @@ img {
   border-radius: 5px;
   padding: 10px 20px;
   margin: 10px;
-  background-color: #242424;
-  color: #42b883;
+  background-color: var(--second-bg-color);
+  color: var(--font-color-green);
 }
 </style>
