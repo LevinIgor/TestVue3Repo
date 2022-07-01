@@ -5,7 +5,7 @@
       <parallax-card v-for="block in blocks" :card="block" class="block" />|
     </div>
     <div class="text">
-      <div class="text-title">Details</div>
+      <div class="text-title">Skills</div>
       <div class="text-blocks">
         <a
           v-for="textBlock in textBlocks"
