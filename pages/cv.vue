@@ -1,7 +1,7 @@
 <template>
   <my-message :title="'test title'" :text="'test text'" ref="message" />
   <div class="container">
-    <my-header @scrollTo="scrollTo($event)" :currentPageBLock="currentTitle" />
+    <my-header @scrollTo="scrollTo($event)" :currentPageBLock="currentTitle" :links="navLinks" />
     <my-info ref="information" v-intersection="'Information'" />
     <my-projects ref="projects" v-intersection="'Projects'" />
     <my-experience ref="experience" v-intersection="'Experience'" />
@@ -29,9 +29,10 @@ const experience = ref(null);
 const message = ref(null);
 
 const currentTitle = ref("Information");
+const navLinks = ["Information", "Projects", "Experience", "Contacts"];
 
 const scrollTo = async (element) => {
-  currentTitle.value = element;
+
   element == "Information"
     ? information.value.$el.scrollIntoView({ behavior: "smooth" })
     : "";
