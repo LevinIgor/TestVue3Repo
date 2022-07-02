@@ -12,7 +12,7 @@
       >
         {{ link }}
       </div>
-      <a href="" class="github-icon">
+      <a href="https://github.com/LevinIgor" target="_blank" class="github-icon">
         <img src="../public/icons/github.svg" alt="" />
       </a>
       <my-toggle class="link" />
