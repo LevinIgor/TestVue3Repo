@@ -12,31 +12,8 @@
       </div>
     </div>
     <div class="links">
-      <a class="link" target="_blank" href="https://github.com/LevinIgor">
-        <img src="../public/icons/github.svg" alt="" />GitHub</a
-      >
-      <a class="link" target="_blank" href="https://t.me/Levin_Ihor">
-        <img src="../public/icons/telegram.svg" alt="" />Telegram</a
-      >
-      <a
-        class="link"
-        target="_blank"
-        href="https://www.linkedin.com/in/levin-igor/"
-      >
-        <img src="../public/icons/linkedin.svg" alt="" />Linkedin</a
-      >
-      <a class="link" target="_blank" href="viber://chat?number=+380958318689">
-        <img src="../public/icons/viber.svg" alt="" />Viber</a
-      >
-      <a
-        class="link"
-        target="_blank"
-        href="https://www.instagram.com/levin_ihor/"
-      >
-        <img src="../public/icons/instagram.svg" alt="" />Instagram</a
-      >
-      <a class="link" target="_blank" href="mailto:lytghzys@gmail.com">
-        <img src="../public/icons/mail.svg" alt="" />Email</a
+      <a class="link" target="_blank" :href="link.href" v-for="link in links">
+        <img :src="link.iconSrc" alt="" />{{ link.name }}</a
       >
     </div>
   </div>
@@ -44,11 +21,44 @@
 <script setup>
 import { useClipboard } from "@vueuse/core";
 const { copy } = useClipboard();
+
+const links = [
+  {
+    name: "GitHub",
+    iconSrc: "../public/icons/github.svg",
+    href: "https://github.com/LevinIgor",
+  },
+  {
+    name: "Telegram",
+    iconSrc: "../public/icons/telegram.svg",
+    href: "https://t.me/Levin_Ihor",
+  },
+  {
+    name: "Linkedin",
+    iconSrc: "../public/icons/linkedin.svg",
+    href: "https://www.linkedin.com/in/levin-igor/",
+  },
+  {
+    name: "Viber",
+    iconSrc: "../public/icons/viber.svg",
+    href: "viber://chat?number=+380958318689",
+  },
+  {
+    name: "Instagram",
+    iconSrc: "../public/icons/instagram.svg",
+    href: "https://www.instagram.com/levin_ihor/",
+  },
+  {
+    name: "Email",
+    iconSrc: "../public/icons/mail.svg",
+    href: "mailto:lytghzys@gmail.com",
+  },
+];
 </script>
 <style scoped>
-.my-contact{
- padding-top: 100px;
- color: var(--font-color-white);
+.my-contact {
+  padding-top: 100px;
+  color: var(--font-color-white);
 }
 .header {
   padding: 20px;
@@ -65,8 +75,28 @@ const { copy } = useClipboard();
 }
 .contact {
   cursor: pointer;
+  position: relative;
   display: flex;
   align-items: center;
+}
+.contact::after {
+  content: "Click to copy";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: var(--font-color-white);
+
+  top: -60px;
+  left: 10px;
+  width: 200px;
+  height: 50px;
+  opacity: 0;
+  background-color: var(--second-bg-color);
+  transition: opacity 0.3s ease-in-out;
+}
+.contact:hover::after {
+  opacity: 1;
 }
 .links {
   display: flex;
