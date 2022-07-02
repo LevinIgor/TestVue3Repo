@@ -8,7 +8,7 @@
         class="link"
         @click="scroll(link)"
         v-for="link in links"
-        :class="{ active: props.currentTitle == link }"
+        :class="{ active: props.currentPageBLock == link }"
       >
         {{ link }}
       </div>
@@ -31,13 +31,13 @@
 <script setup>
 import myToggle from "./myToggle.vue";
 
-const emit = defineEmits(["scroll"]);
-const props = defineProps(['currentTitle']);
+const emit = defineEmits(["scrollTo"]);
+const props = defineProps(['currentPageBLock']);
 
 const links = ["Information", "Projects", "Experience", "Contacts"];
 
 const scroll = (link) => {
-  emit("scroll", link);
+  emit("scrollTo", link);
 };
 
 </script>

@@ -1,7 +1,7 @@
 <template>
   <my-message :title="'test title'" :text="'test text'" ref="message" />
   <div class="container">
-    <my-header @scroll="scrollTo($event)" :currentTitle="currentTitle" />
+    <my-header @scrollTo="scrollTo($event)" :currentPageBLock="currentTitle" />
     <my-info ref="information" v-intersection="'Information'" />
     <my-projects ref="projects" v-intersection="'Projects'" />
     <my-experience ref="experience" v-intersection="'Experience'" />
@@ -46,6 +46,7 @@ const scrollTo = async (element) => {
     : "";
 };
 
+// При пересечении блока, задаем как тот который сейчас просматривается. Нужно для отображения в меню.
 const vIntersection = {
   mounted: ($el, binding) => {
     const options = {
