@@ -4,7 +4,12 @@
       <span> Curriculum vitae CV </span>
     </div>
     <div class="navbar">
-      <div class="link" @click="emit('scroll', link)" v-for="link in links">
+      <div
+        class="link"
+        @click="scroll(link)"
+        v-for="link in links"
+        :class="{ active: activeLink == link }"
+      >
         {{ link }}
       </div>
 
@@ -25,9 +30,16 @@
 
 <script setup>
 import myToggle from "./myToggle.vue";
+import { ref } from "vue";
 
 const emit = defineEmits(["scroll"]);
-const links = ["Information", "Projects","Experience", "Contacts", ];
+const links = ["Information", "Projects", "Experience", "Contacts"];
+var activeLink = ref("Information");
+
+const scroll = (link) => {
+  activeLink.value = link;
+  emit("scroll", link);
+};
 </script>
 
 <style scoped>
@@ -77,7 +89,10 @@ header {
   margin-left: 10px;
   font-size: 14px;
   font-weight: 500;
-  
+  border-bottom: 2px solid transparent;
+}
+.active {
+  border-bottom: 2px solid var(--font-color-green);
 }
 .link:hover {
   color: var(--font-color-green);
