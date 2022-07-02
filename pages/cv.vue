@@ -1,4 +1,5 @@
 <template>
+  <my-message :title="'test title'" :text="'test text'" ref="message" />
   <div class="container">
     <my-header @scroll="scrollTo($event)" />
     <my-info ref="information" />
@@ -16,6 +17,7 @@ import MyProjects from "@/components/myProjects.vue";
 import myExperience from "@/components/myExperience.vue";
 import MyLinks from "@/components/myLinks.vue";
 import MyFooter from "@/components/myFooter.vue";
+import myMessage from "@/components/myMessage.vue";
 
 import { ref } from "vue";
 
@@ -23,6 +25,7 @@ const projects = ref(null);
 const contacts = ref(null);
 const information = ref(null);
 const experience = ref(null);
+const message = ref(null);
 
 const scrollTo = async (element) => {
   element == "Information"
