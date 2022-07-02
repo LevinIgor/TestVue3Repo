@@ -16,6 +16,7 @@
 }
 #app{  
     font-family: 'Roboto', sans-serif;
+    user-select: none;
 }
 ::-webkit-scrollbar {
   width: 0;
