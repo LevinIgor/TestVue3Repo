@@ -20,6 +20,7 @@
 </template>
 <script setup>
 import { useClipboard } from "@vueuse/core";
+
 const { copy } = useClipboard();
 
 const links = [
@@ -86,17 +87,21 @@ const links = [
   align-items: center;
   position: absolute;
   color: var(--font-color-white);
-
-  top: -60px;
+  
+  box-sizing: border-box;
+  top: 0px;
   left: 10px;
   width: 200px;
   height: 50px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
   opacity: 0;
   background-color: var(--second-bg-color);
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.4s, transform .4s;
 }
 .contact:hover::after {
   opacity: 1;
+  transform: translateY(-60px);
 }
 .links {
   display: flex;
