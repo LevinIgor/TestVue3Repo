@@ -8,7 +8,7 @@
         class="link"
         @click="scroll(link)"
         v-for="link in links"
-        :class="{ active: activeLink == link }"
+        :class="{ active: props.currentTitle == link }"
       >
         {{ link }}
       </div>
@@ -30,16 +30,16 @@
 
 <script setup>
 import myToggle from "./myToggle.vue";
-import { ref } from "vue";
 
 const emit = defineEmits(["scroll"]);
+const props = defineProps(['currentTitle']);
+
 const links = ["Information", "Projects", "Experience", "Contacts"];
-var activeLink = ref("Information");
 
 const scroll = (link) => {
-  activeLink.value = link;
   emit("scroll", link);
 };
+
 </script>
 
 <style scoped>

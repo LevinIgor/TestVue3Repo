@@ -1,12 +1,13 @@
 <template>
   <my-message :title="'test title'" :text="'test text'" ref="message" />
   <div class="container">
-    <my-header @scroll="scrollTo($event)" />
-    <my-info ref="information" />
-    <my-projects ref="projects" />
-    <my-experience ref="experience" />
-    <my-links ref="contacts" />
+    <my-header @scroll="scrollTo($event)" :currentTitle="currentTitle" />
+    <my-info ref="information" v-intersection="'Information'" />
+    <my-projects ref="projects" v-intersection="'Projects'" />
+    <my-experience ref="experience" v-intersection="'Experience'" />
+    <my-links ref="contacts" v-intersection="'Contacts'" />
     <my-footer />
+    <div class="test">11111111111</div>
   </div>
 </template>
 
@@ -27,7 +28,10 @@ const information = ref(null);
 const experience = ref(null);
 const message = ref(null);
 
+const currentTitle = ref("Information");
+
 const scrollTo = async (element) => {
+  currentTitle.value = element;
   element == "Information"
     ? information.value.$el.scrollIntoView({ behavior: "smooth" })
     : "";
@@ -40,6 +44,24 @@ const scrollTo = async (element) => {
   element == "Experience"
     ? experience.value.$el.scrollIntoView({ behavior: "smooth" })
     : "";
+};
+
+const vIntersection = {
+  mounted: ($el, binding) => {
+    const options = {
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const callback = (entries) => {
+      if (entries[0].isIntersecting) {
+        currentTitle.value = binding.value;
+      }
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe($el);
+  },
 };
 </script>
 

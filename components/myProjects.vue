@@ -1,5 +1,5 @@
 <template>
-  <div class="projects">
+  <div class="projects" ref="project">
     <div class="header">Projects</div>
     <div class="blocks">
       <div class="project" v-for="project in projects">
@@ -23,6 +23,7 @@
   </div>
 </template>
 <script setup>
+
 const projects = [
   {
     name: "Geopardy",
@@ -37,7 +38,7 @@ const projects = [
   {
     name: "CV in Vue3",
     description:
-      'This is a CV in Vue3. It is a simple CV with a lot of features. It is a work in progress and is not finished yet.',
+      "This is a CV in Vue3. It is a simple CV with a lot of features. It is a work in progress and is not finished yet.",
     imgUrl:
       "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/cv-Vue3.png?alt=media&token=4483a269-ae06-4f38-a0a1-e39b1f9ea654",
     githubUrl: "https://github.com/LevinIgor/TestVue3Repo",
