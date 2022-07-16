@@ -186,6 +186,13 @@ const textBlocks = [
       "../public/icons/firebase.png",
     color: "#604c06",
   },
+  {
+    title: "Vercel",
+    url: "https://firebase.google.com/docs/storage",
+    iconUrl:
+      "../public/icons/firebase.png",
+    color: "#604c06",
+  },
 ];
 </script>
 <style scoped>

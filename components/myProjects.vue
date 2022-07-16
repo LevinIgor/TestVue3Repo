@@ -23,7 +23,6 @@
   </div>
 </template>
 <script setup>
-
 const projects = [
   {
     name: "Geopardy",
@@ -44,6 +43,15 @@ const projects = [
     githubUrl: "https://github.com/LevinIgor/TestVue3Repo",
     projectUrl: "https://levinigor.github.io/geopardy/",
     tags: ["Vue 3", "Vuex", "Composition API", "VueUse"],
+  },
+  {
+    name: "Journal posts in Vue3",
+    description: "A site with entries on various topics.",
+    imgUrl:
+      "https://firebasestorage.googleapis.com/v0/b/dossier-cda53.appspot.com/o/journalPic.png?alt=media&token=ba116a59-ddb1-48ac-b942-c8c6b533e3e7",
+    githubUrl: "https://github.com/LevinIgor/myJournal",
+    projectUrl: "https://my-journal-smoky.vercel.app/",
+    tags: ["Vue 3", "Firebase", "Firestore", "Composition API", "VueUse"],
   },
 ];
 </script>
